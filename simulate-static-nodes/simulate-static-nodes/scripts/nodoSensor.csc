@@ -46,3 +46,8 @@ if(bat<5)
    data message "critic" lonSen latSen
    send message ant
 end
+
+if( temp<15)
+   print "Low temperature"
+   battery set bat - 0.5
+end
