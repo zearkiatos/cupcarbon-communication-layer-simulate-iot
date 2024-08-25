@@ -1,4 +1,6 @@
 set ant 999
+set iterate 0
+battery set 100
 atget id id
 getpos2 lonSen latSen
 loop
@@ -13,7 +15,6 @@ if((type=="healthcheck") && (ant == 999))
 end
 
 if(type=="alert")
-   print "Alert!!!"
    send message ant
 end
 delay 1000
@@ -23,5 +24,25 @@ rdata tempSen SensTipo idSens temp
 
 if( temp>30)
    data message "alert" lonSen latSen
+   send message ant
+end
+
+inc iterate
+print iterate
+if (iterate >= 1000)
+   stop
+end
+
+if (type=="stop")
+   data message "stop"
+   send message * value
+   cprint "Para sensor: " id
+   wait 1000
+   stop
+end
+
+battery bat
+if(bat<5)
+   data message "critic" lonSen latSen
    send message ant
 end
