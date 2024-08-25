@@ -1,21 +1,20 @@
 set ant 999
-
 atget id id
 getpos2 lonSen latSen
-
 loop
-wait 100
-read mens
-rdata mens tipo valor
+wait 10
+read message
+rdata message type value
 
-if((tipo=="hola") && (ant == 999))
-   set ant valor
-   data mens tipo id
-   send mens * valor
+if((type=="healthcheck") && (ant == 999))
+   set ant value
+   data message type id
+   send message * value
 end
 
-if(tipo=="alerta")
-   send mens ant
+if(type=="alert")
+   print "Alert!!!"
+   send message ant
 end
 delay 1000
 
@@ -23,6 +22,6 @@ areadsensor tempSen
 rdata tempSen SensTipo idSens temp
 
 if( temp>30)
-   data mens "alerta" lonSen latSen
-   send mens ant
+   data message "alert" lonSen latSen
+   send message ant
 end
