@@ -2,11 +2,12 @@ List of parameters
 ------------------------------------------
 device_type:1
 device_id:19
-device_longitude:-74.04592037200928
-device_latitude:4.620955986751113
+device_longitude:-74.05067324638367
+device_latitude:4.606829122470768
 device_elevation:0.0
 device_radius:0.0
 device_hide:0
 device_pic:0
 device_draw_battery:false
-device_sensor_unit_radius:20.0
+device_sensor_unit_radius:50.0
+device_script_file_name:nodoSensor.csc
