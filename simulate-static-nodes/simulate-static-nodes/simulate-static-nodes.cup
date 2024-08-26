@@ -1,9 +1,9 @@
 CupCarbon v. Twin IoT 6.52
 ----------------
 name:simulate-static-nodes
-zoom:1
-centerposition_la:4.5997762795874335
-centerposition_lo:-74.06149864196777
+zoom:7
+centerposition_la:4.6183787372847025
+centerposition_lo:-73.92204254865646
 map:0
 display_details:true
 draw_radio_links:true
