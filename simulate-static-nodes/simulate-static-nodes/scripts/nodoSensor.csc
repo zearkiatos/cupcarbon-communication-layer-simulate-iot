@@ -29,9 +29,6 @@ end
 
 inc iterate
 print iterate
-if (iterate >= 1000)
-   stop
-end
 
 if (type=="stop")
    data message "stop"

@@ -9,5 +9,5 @@ device_radius:0.0
 device_hide:0
 device_pic:0
 device_draw_battery:true
-device_sensor_unit_radius:50.0
+device_sensor_unit_radius:200.0
 device_script_file_name:nodoSensor.csc
